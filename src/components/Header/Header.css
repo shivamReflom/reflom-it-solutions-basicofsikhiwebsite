@@ -1,0 +1,102 @@
+nav{
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content:space-between;
+    color: #000;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0px 9px #eedff9;
+}
+.menu-icon{
+    display: none;
+}
+.fas{
+    cursor: pointer;
+}
+.menu-icon .fa-times{
+    transform: rotate(360deg);
+    transition: all 0.2s ease-in-out;
+}
+.menu-icon .fa-bars{
+    transform: rotate(1800deg);
+    transition: all 0.2s ease-in-out;
+}
+.logo img{
+    width: 15rem;
+}
+.menu-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-list li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+.menu-list li:last-child a{
+    font-weight: 600;
+    padding: 5px 10px;
+    background-color: rgba(121, 121, 233, 0.61);
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+.menu-list li:last-child a:hover{
+    color: #fff; 
+}
+.menu-list li a:hover,
+.menu-list li a.active{
+    color: rgba(121, 121, 233, 0.61);
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width:800px) {
+    .logo img{
+        width: 8rem;
+    }
+    .menu-list li a{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .menu-icon{
+        display: block;
+    }
+    .menu-list{
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        right: 0;
+        top: 64px;
+        transition: all 0.5s ease-in-out;
+    }
+    .menu-list li{
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-list li:last-child{
+        margin-bottom: 0px;
+    }
+    .menu-list li a,
+    .menu-list li:last-child a{
+        width: 100px;
+        display: block;
+        margin: auto;
+    }
+    .menu-list.close{
+        right: -100%;
+        transition: all 0.5s ease-in-out;
+    }
+}
