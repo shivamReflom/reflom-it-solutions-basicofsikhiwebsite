@@ -21,6 +21,7 @@ const Header = () => {
     }
 
   return (
+    <>
    <nav>
         <div className='logo'>
             <img src={Logo} alt="site-logo" />
@@ -30,10 +31,32 @@ const Header = () => {
         </div>
         <ul className={clicked ? "menu-list" : "menu-list close"}>
             { menuList }
-            <li><NavLink to="/demo">Login/Register</NavLink></li>
+            <li><NavLink to="#" data-toggle="modal" data-target="#exampleModal">Login/Register</NavLink></li>
             <li><NavLink to="demo">Donate</NavLink></li>
         </ul>
    </nav>
+
+            {/* Modal */}
+<div style={{marginTop: "80px"}} className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-header">
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div className="modal-body">
+        ...
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</>
   )
 }
 
