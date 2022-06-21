@@ -6,7 +6,7 @@ nav{
     color: #000;
     position: relative;
     z-index: 99;
-    box-shadow: 0px 9px #eedff9;
+    box-shadow: 0px 6px #eedff9;
 }
 .menu-icon{
     display: none;
@@ -57,6 +57,25 @@ nav{
     transition: all 0.5s ease-in-out;
 }
 
+.modal-content{
+    /* background-color: gray !important; */
+    border: 0px;
+}
+
+.modal-header{
+    border-bottom: 0px !important;
+}
+.modal-body{
+    background-color: #fff;
+    border-radius: 5px;
+}
+.close{
+    background-color: #fff !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* border: 1px solid blue; */
+    padding: 8px 12px;
+}
 
 @media screen and (max-width:800px) {
     .logo img{
